@@ -65,6 +65,31 @@ header {
 
 }
 
+/* added .character-amount-container */
+.character-amount-container {
+  display: flex;
+  align-items: center;
+}
+
+/*added .number-input*/
+.number-input {
+  width: 3rem;
+}
+
+/* added .passwordDisplay*/
+.passwordDisplay {
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  border: 1px solid #333;
+  height: 2rem;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  word-break: break-all;
+}
+
 .card-footer {
   text-align: center;
 }
