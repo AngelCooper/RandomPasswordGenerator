@@ -36,7 +36,7 @@ form.addEventListener('submit', e => {
   const includeUppercase = includeUppercaseElement.checked
   const includeNumbers = includeNumbersElement.checked
   const includeSymbols = includeSymbolsElement.checked
-  const password = generatePassword(characterAmount, includeUppercase, includeLowercase, includeSymbols)
+  const password = generatePassword(characterAmount, includeUppercase, includeNumbers, includeSymbols)
   password.innerText = password
 })
 
@@ -50,10 +50,10 @@ function generatePassword(characterAmount, includeUppercase, includeNumbers, inc
   (SYMBOL_CHAR_CODES)
   const passwordCharacters = []
   for (let i = 0; i < characterAmount; i++) {
-    const characterCode = charCodes[Math.floor(Math.random() * characterAmount)]
-    passwordCharacters.push(String.fromCharCode(characterCodes))
+    const characterCode = charCodes[Math.floor(Math.random() * charCodes.length)]
+    passwordCharacters.push(String.fromCharCode(characterCode))
   }
-  return passwordCharacters.join(' ')
+  return passwordCharacters.join('')
 }
 
 function arrayFromLowToHigh(low, high) {
