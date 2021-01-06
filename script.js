@@ -37,7 +37,7 @@ form.addEventListener('submit', e => {
   const includeNumbers = includeNumbersElement.checked
   const includeSymbols = includeSymbolsElement.checked
   const password = generatePassword(characterAmount, includeUppercase, includeNumbers, includeSymbols)
-  password.innerText = password
+  passwordDisplay.textContent = password
 })
 
 function generatePassword(characterAmount, includeUppercase, includeNumbers, includeSymbols) {
